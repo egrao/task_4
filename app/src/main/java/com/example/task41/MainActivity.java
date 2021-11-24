@@ -14,13 +14,17 @@ public class MainActivity extends AppCompatActivity implements
         AdapterView.OnItemSelectedListener {
     private static final String TAG = MainActivity.class.getSimpleName();
     private String mSpinnerLabel = "";
+    private String aux;
+//    private String[] yourArray = getResources().getStringArray(R.array.labels_array);
+//    private String yourString = yourArray[1];
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Create the spinner.
-        Spinner spinner = (Spinner) findViewById(R.id.label_spinner);
+        Spinner spinner = findViewById(R.id.label_spinner);
         if (spinner != null) {
             spinner.setOnItemSelectedListener(this);
         }
@@ -38,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements
         }
     }
     public void showText(View view) {
-        EditText editText = (EditText) findViewById(R.id.editText_main);
+        EditText editText = findViewById(R.id.editText_main);
         if (editText != null) {
             String showString = (editText.getText().toString() + " - " + mSpinnerLabel);
             Toast.makeText(this, showString, Toast.LENGTH_SHORT).show();
@@ -48,7 +52,8 @@ public class MainActivity extends AppCompatActivity implements
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         mSpinnerLabel = adapterView.getItemAtPosition(i).toString();
-        if (mSpinnerLabel != "Pick one") {
+        aux =(adapterView.getItemAtPosition(0).toString());
+        if (!mSpinnerLabel.equals(aux)) {
             showText(view);
         }
 
