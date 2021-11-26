@@ -2,6 +2,22 @@
     <string name="app_name">task 4.1</string>
     <string name="show">Show</string>
     <string name="enter">Enter phone number</string>
+    <string name="tap_test">Tap to test the alert:</string>
+    <string name="alert_button">Alert</string>
+    <string name="alert_title">Alert</string>
+    <string name="alert_message">Click OK to continue, or Cancel to stop:</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="pressed_ok">PRESSED OK</string>
+    <string name="pressed_cancel">PRESSED CANCEL</string>
+    <string name="choose_datetime">Choose the date and time:</string>
+    <string name="date_button">Date</string>
+    <string name="time_button">Time</string>
+    <string name="date_picker">datePicker</string>
+    <string name="time_picker">timePicker</string>
+    <string name="date">"Date: "</string>
+    <string name="time">"Time: "</string>
+
     <string-array name="labels_array">
         <item>Pick one</item>
         <item>Home</item>
@@ -9,4 +25,6 @@
         <item>Mobile</item>
         <item>Other</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
